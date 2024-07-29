@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style tag</title>
+    <!-- margin -->
+    <!--
+        해당 태그 요소의 바깥쪽으로 공간을 확보 -> 거리두기
+    -->
+    <!-- padding -->
+    <!--  
+        원래 공간에서 안쪽으로 빈 공간을 확보 -> 테두리로부터 거리두기
+    -->
+    <style>
+        
+        .content {
+            display: inline-block;
+            width: 300px;
+            margin: 30px;
+        }
+
+        div.content>ul>li.fruit {
+            margin-top: 5px;
+            padding-left: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        <div id="header">
+            <a href="" id="linker">
+                <img src="" alt="">
+            </a>
+        </div>
+        <div id="container">
+            <div class="content">
+                <ul>
+                    <li class="fruit" style="display: inline;">바나나</li>
+                    <li class="fruit" style="display: block; width: 40px;">사과</li>
+                    <li class="fruit" style="display: inline-block; width: 40px; height: 60px;">감</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
