@@ -5,17 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form 태그 다루기</title>
     <style>
-        #user_id_text {
-            display: none;
+        #user_id_wrapper {
+            padding-top: 27px;
+            padding-bottom: 15px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        #user_pw_wrapper {
+            padding-top: 15px;
+            padding-bottom: 27px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        #input_wrapper {
+            width: 300px;
+        }
+        
+        div.wrapper {
+            padding-left: 8px;
+            padding-right: 8px;
+            display: block;
+            border: 1px solid gray;
+        }
+
+        div.wrapper>input {
+            border: none;
+        }
+
+        div.wrapper>input:focus{
+            outline: none;
+        }
+
+        div.wrapper>input {
+            display: inline-block;
+            width: inherit;
+            height: inherit;
         }
     </style>
 </head>
 <body>
     <!-- 로그인 폼 만들기 -->
     <form action="#">
-        <div>
-            <label for="user_id" id="user_id_label"></label>
-            <input type="text" id="user_id">
+        <div id="input_wrapper">
+            <div id="user_id_wrapper" class="wrapper">
+                <label for="user_id" id="user_id_label">
+                </label>
+                <input type="text" id="user_id" placeholder="아이디 또는 전화번호">
+            </div>
+            <div id="user_pw_wrapper" class="wrapper">
+                <label for="user_pw" id="user_pw_label"></label>
+                <input type="text" id="user_pw" placeholder="비밀번호 입력">
+            </div>
         </div>
     </form>
 </body>
