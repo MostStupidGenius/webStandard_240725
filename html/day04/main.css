@@ -1,0 +1,22 @@
+div, span, a {
+    background-color: aquamarine;
+}
+
+div.container#content_wrapper {
+    display: inline-block;
+}
+
+.green {
+    background-color: green;
+}
+.red {
+    background-color: red;
+}
+
+div>div.content {
+    background-color: aqua;
+}
+
+div.content>span {
+    background-color: black;
+}
