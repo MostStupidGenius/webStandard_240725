@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 태그</title>
+    <style>
+        tr, th, td, table {
+            border: 1px solid black;
+            border-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!--  
+            caption
+            캡션은 테이블 태그에서 제목에 해당하는 태그로
+            반드시 가장 먼저 사용하여 테이블에 대한 정보를 보여주어야 한다.
+        -->
+        <caption>예제</caption>
+        <!--  
+            tr : 한 행을 묶는 태그로 안에는 th 혹은 td 태그가 들어간다.
+        -->
+        <tr>
+            <!--
+            th : header를 나타내는 태그로 표에서 해당 셀의 데이터들의 대표적인
+            개념을 나타내는 제목을 쓰는 태그다.
+            -->
+            <th>이름</th>
+            <th>나이</th>
+        </tr>
+        <tr>
+            <!--  
+            td : 실질적인 데이터가 들어가는 셀을 나타내는 태그다.
+            -->
+            <td>홍길동</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>고길동</td>
+            <td>40</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>상품명</th>
+            <th>개수</th>
+            <th>가격</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>콜라</td>
+            <td>1개</td>
+            <td>1500원</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>사이다</td>
+            <td>2개</td>
+            <td>1000원</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>탄산수</td>
+            <td>3개</td>
+            <td>1000원</td>
+        </tr>
+    </table>
+
+</body>
+</html>
