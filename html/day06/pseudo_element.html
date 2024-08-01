@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 선택자</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!--  
+        수도코드(pseudo code) : 의사 코드
+        가상 요소 선택자(pseudo element)
+            실제로 존재하지 않지만 가상으로 특정 선택자를
+            지정할 수 있는 문법
+    -->
+    <div id="wrapper">
+        <header>헤더</header>
+        <main>
+            <article>내용</article>
+            <form action="#" method="post">
+                <input type="text" placeholder="아무거나 입력">
+                <button disabled>그냥 버튼</button>
+            </form>
+            <a href="http://127.0.0.1:5500/html/day05/table.html">페이지 이동</a>
+            <a href="#">페이지 이동2</a>
+            <div>
+                <table id="table">
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <footer>하단 내용</footer>
+    </div>
+</body>
+</html>

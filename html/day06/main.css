@@ -1,0 +1,27 @@
+header::after {
+    content: '<after>';
+    background-color: white;
+}
+header::before {
+    content: '<before>';
+    font-size: larger;
+}
+header:hover {
+    background-color: aqua;
+}
+#wrapper:focus {
+    background-color: blue;
+}
+input:focus {
+    font-size: large;
+}
+button:active {
+    background-color: blueviolet;
+}
+a:visited {
+    color: brown;
+}
+a:link {
+    color: rgb(212, 255, 0);
+}
+

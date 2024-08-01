@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css position 속성</title>
+    <style>
+        div#container>* {
+            display: block;
+            height: 150px;
+        }
+        #header {
+            position: absolute;
+            border: 1px solid black;
+            left: 50px;
+            top: 50px;
+        }
+        #main {
+            position: relative;
+            border: 1px solid blue;
+        }
+        #main>div{
+            position: relative;
+            left: 30px;
+            top: 30px;
+        }
+        #footer>div {
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        absolute : 부모 태그의 위치와 무관하게 전체 문서의
+        최상단, 최좌측을 기준점으로 잡는 position 속성값이다.
+        relative : 기본값으로, 부모 태그의 내부를 기준점으로 잡는
+        position 속성값이다.
+        fixed : 사용자가 보는 웹브라우저의 화면의 최상단, 최좌측을
+        기준점으로 위치를 잡는 position 속성값이다.
+    -->
+    <div id="container">
+        <!-- <header id="header">헤더</header> -->
+        <main id="main">
+            <div>첫번째</div>
+            <div>두번째</div>
+            <div>세번째</div>
+        </main>
+        <footer id="footer">
+            <div>푸터1</div>
+            <div>푸터2</div>
+        </footer>
+    </div>
+</body>
+</html>

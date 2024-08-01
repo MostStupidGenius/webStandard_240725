@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진과 패딩</title>
+    <style>
+        div>* {
+            display: inline-block;
+        }
+        .m-3 {
+            margin: 30px;
+        }
+
+        .p-2 {
+            padding: 20px;
+        }
+
+        .mt-3 {
+            margin-top: 30px;
+        }
+
+        .pb-3 {
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        margin
+            현재 요소의 크기 바깥으로 확장을 해서 다른 요소가 해당 범위에
+            못 들어오게 만드는 속성이다.
+        padding
+            현재 요소의 크기 안쪽으로 조여들어 내부의 요소를 안쪽으로 들어가게끔
+            하는 속성이다.
+    -->
+    <div>
+        <div class="m-3 p-2">div</div>
+        <div class="mt-3 pb-3">div2</div>
+        <span class="mt-3">span</span>
+    </div>
+</body>
+</html>
