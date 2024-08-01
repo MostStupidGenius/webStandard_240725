@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 속성</title>
+    <style>
+        .box {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+        .red_box {
+            background-color: red;
+            width: 60px;
+            z-index: 3;
+        }
+        
+        .blue_box {
+            background-color: blue;
+            width: 70px;
+            z-index: 1;
+        }
+
+        .black_box {
+            background-color: black;
+            width: 90px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        z-index : 각 요소간의 앞뒤 순서를 나타내는 값으로
+        값이 높으면 다른 요소의 위에 올라와 보인다.
+        기본값 0, 숨기고자 하는 요소에 -1을 주어서 숨기거나
+        0보다 큰 정수를 사용해서 다른 요소 위로 보이게끔 하는 방식으로
+        사용된다.
+    -->
+    <div class="box red_box"></div>
+    <div class="box blue_box"></div>
+    <div class="box black_box"></div>
+</body>
+</html>
