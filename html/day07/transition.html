@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전환 효과</title>
+    <style>
+        div>div.box {
+            width: 150px;
+            height: 150px;
+        }
+
+        .red-box {
+            background-color: rgb(255, 104, 104);
+        }
+
+        .blue-box {
+            background-color: rgb(79, 79, 250);
+        }
+
+        .red-box:hover {
+            background-color: rgb(79, 79, 250);
+            color: cadetblue;
+        }
+
+        .blue-box:active {
+            background-color: rgb(255, 104, 104);
+        }
+
+        .box {
+            /*
+                transition-property
+                대상을 설정하는 속성
+            */
+            transition-property: background-color;
+            /*
+                transition-duration
+                전환되는 시간을 조절하는 속성
+            */
+            transition-duration: 2s;
+            /*
+                transition-delay
+                전환이 시작되는 시점을 조절하는 속성
+            */
+            transition-delay: 0.1s;
+            /*
+                transition-timing-function
+                처음 전환속도와 중간 속도, 그리고 마지막 속도를
+                조절하는 속성
+                linear
+                기본값으로 처음 속도와 마지막 속도가 동일하다.
+                ease
+                점점 빨라지다가 중간부터 느려진다.
+                ease-in
+                느리게 시작해서 점점 빨라진다.
+                ease-out
+                빠르게 시작해서 점점 느려진다.
+                ease-in-out
+                느리게 시작해서 점점 빨라지다가 다시 느려진다.
+            */
+            transition-timing-function: cubic-bezier(0.54, -0.04, 0.42, 1.01);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="red-box box">빨간 박스</div>
+        <div class="blue-box box">파란 박스</div>
+    </div>
+</body>
+</html>

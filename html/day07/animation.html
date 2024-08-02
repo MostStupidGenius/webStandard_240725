@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과</title>
+    <link rel="stylesheet" href="../box.css">
+    <style>
+        /**/
+        /*
+            애니메이션
+            css3 추가된 고급 전환 효과이다.
+            전환하는 동안의 시점마다
+            서로 다른 css 속성을 적용하는 고급 전환 효과이다.
+            
+            키프레임
+            시간을 %단위로 나눈 방식
+            @keyframes <키 프레임명> {
+                0%{css코드}
+                n%{css코드}
+                100%{css코드}
+            }
+            시작과 끝만 바꾸는 방식
+            @keyframes <키 프레임명> {
+                from{시작 css}
+                to{끝 css}
+            }
+        */
+        @keyframes kfbox {
+            0%{background-color: red;}
+            25%{background-color: orange;}
+            50%{background-color: yellow;}
+            100%{background-color: green;}
+        }
+
+        .red-box:hover {
+            animation-name: kfbox;
+            animation-duration: 3s;
+            animation-delay: 1s;
+            /*
+                fill-mode
+                애니메이션이 실행 전과 실행 후의 스타일을 지정한다.
+                종료된 시점의 상태를 유지할 수 있다.
+                none
+                : 기본값으로
+                실행 전에는 0%의 스타일을 적용하지 않고
+                대기한다
+                실행 후에는 스타일 적용 전으로 돌아간다.
+                forwards
+                : 실행 전에는 0%의 스타일을 적용하지 않고
+                실행 후에는 스타일 적용한 상태로 대기한다.
+                backwads
+                : 실행 전에 0%의 스타일을 적용한 상태로 대기
+                실행 후에는 스타일 적용 전으로 돌아간다.
+                both
+                : 시작(0%)과 끝(100%) 모두 적용한 상태로 대기
+            */
+            animation-fill-mode: both;
+            /*
+                -iteration-count
+                기본적으로 애니메이션은 1회만 실행된다.
+                이 속성을 이용해 실행횟수를 조절할 수 있다.
+                숫자: 그 횟수만큼 반복
+                infinite : 무한 반복
+            */
+            animation-iteration-count: infinite;
+            /*
+                -play-state
+                재생 상태를 설정하는 속성이다.
+                paused
+                    일시 정지
+                running
+                    실행
+            */
+            animation-play-state: running;
+            /*
+                -direction
+                키프레임 기준으로 진행방향을 정하는 속성이다.
+                normal : 기본값 0% -> 100%
+                reverse: 100% -> 0%
+                alternate: 1회 이상 실행될 경우
+                홀수번째에는 normal 짝수번째에는 reverse
+                alternate-reverse:
+                홀수번째에는 reverse 짝수번째에는 normal
+            */
+            animation-direction: alternate-reverse;
+            /*
+                animation 속성을 한꺼번에 적용하는 방법
+                animation: <name> <duration> <timing-function> 
+                    <delay> <iteration-count> <direction> <fill-mode>;
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box red-box"></div>
+        <div class="box blue-box"></div>
+    </div>
+</body>
+</html>
