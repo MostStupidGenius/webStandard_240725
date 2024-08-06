@@ -8,7 +8,7 @@
 // 여러 번 선언하더라도 그 순서에 맞게만 실행이 된다.
 console.log(x) // undefiend
 // console.log(y) // Ref error
-x = 3
+x = 4
 var x = 3
 print(x)
 function print(params) {
